@@ -31,13 +31,14 @@ release](../../releases/latest).**
 
 ## Requirements
 
-- macOS 13 or later, on Apple silicon or Intel.
-- A host that loads Audio Units, VST3 or AAX plug-ins: Logic Pro, Pro Tools, Ableton Live,
-  Cubase, REAPER, Studio One and others.
+- macOS 13 or later, on Apple silicon or Intel; or 64-bit Windows 10 or later, on a
+  processor with AVX2 (Intel from 2013, AMD from 2015).
+- A host that loads Audio Units (macOS), VST3 or AAX plug-ins: Logic Pro, Pro Tools,
+  Ableton Live, Cubase, REAPER, Studio One and others.
 
 ## Installation
 
-The installer, a `.pkg` file, installs Surface for all users:
+On macOS the installer, a `.pkg` file, installs Surface for all users:
 
 - the Audio Unit in `/Library/Audio/Plug-Ins/Components`;
 - the VST3 in `/Library/Audio/Plug-Ins/VST3`;
@@ -45,6 +46,14 @@ The installer, a `.pkg` file, installs Surface for all users:
 
 Any format may be left out by choosing **Customize** in the installer. The installer is
 signed with a Developer ID and notarised by Apple.
+
+On Windows the installer, an `.exe` file, installs:
+
+- the VST3 in `C:\Program Files\Common Files\VST3`;
+- the AAX in `C:\Program Files\Common Files\Avid\Audio\Plug-Ins`.
+
+Either format may be left out in the installer. The installer and the plug-ins are signed.
+Hosts should be closed before it is run.
 
 ## Trial and licence
 
@@ -56,9 +65,10 @@ account.
 
 ## Removal
 
-Delete `Surface.component` from `/Library/Audio/Plug-Ins/Components`, `Surface.vst3` from
-`/Library/Audio/Plug-Ins/VST3` and `Surface.aaxplugin` from
-`/Library/Application Support/Avid/Audio/Plug-Ins`.
+On macOS, delete `Surface.component` from `/Library/Audio/Plug-Ins/Components`,
+`Surface.vst3` from `/Library/Audio/Plug-Ins/VST3` and `Surface.aaxplugin` from
+`/Library/Application Support/Avid/Audio/Plug-Ins`. On Windows, remove Surface from
+**Settings > Apps > Installed apps**.
 
 ---
 
